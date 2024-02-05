@@ -63,9 +63,9 @@ Um ponto a se ressaltar é que a descrição da imagem seja feita o mais rica po
 
 Resultado visual do componente "AccessibleImage", que corresponde ao componente ajustado de acordo com a análise e, então acessível:
 
-![Feedback do plugin do storybook sem erros](../../assets/img-case/accessible-lighthouse.png)
+![Feedback do plugin do storybook sem erros](../../assets/img-case/accessible-storybook.png)
 
-![Feedback do plugin do lighthouse sem erros](../../assets/img-case/accessible-lighthouse.png)
+![Feedback do plugin do lighthouse sem erros](../../assets/img-case/accesible-lighthouse.png)
 
 ![Homem de costas caminhando entre as montanhas](../../assets/man-hiking-in-mountains.jpg)
 
