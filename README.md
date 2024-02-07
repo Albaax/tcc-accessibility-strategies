@@ -1,30 +1,78 @@
-# React + TypeScript + Vite
+# Estratégias para Integração de Acessibilidade em Ciclos de Desenvolvimento Rápidos para Desenvolvedores Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório tem como objetivo oferecer apoio ao desenvolvimento do TCC, focando nos casos de uso abordados no trabalho. Serão apresentados passo a passo, mostrando os resultados obtidos e analisando com mais detalhes as ferramentas de apoio e como elas podem auxiliar o desenvolvedor. Além disso, será analisada a importância de cada abordagem no desenvolvimento para a inclusão da acessibilidade.
 
-Currently, two official plugins are available:
+## Como executar o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tendo como pré-requisitos a instalação prévia de ferramentas como Node com npm e Git, você pode clonar o repositório como:
 
-## Expanding the ESLint configuration
+`git clone https://github.com/Albaax/tcc-accessibility-strategies.git`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+e depois, localmente instalar as dependências com:
 
-- Configure the top-level `parserOptions` property like this:
+`npm install`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+Com as dependências instaladas você pode abrir o storybook onde os casos estão separados para observação:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+`npm run storybook`
+
+Aqui, você já poderá interagir com os casos como pode-se ver na imagem abaixo:
+
+![](...)IMAGEM AQUI
+
+## Objetivo do trabalho
+
+Este trabalho tem como objetivo apresentar métodos de desenvolvimento voltados para a acessibilidade, os quais podem ser integrados de maneira mais simples ao processo de desenvolvimento para os front-ends. O foco está em eliminar os erros mais comuns de acessibilidade frequentemente encontrados em sites da web.
+
+## Ferramentas de apoio à acessibilidade
+
+As ferramentas de apoio utilizadas no projeto são:
+
+- Axe Accessibility Linter (extensão do VSCode)
+- Webhint (extensão do VSCode)
+- Addon/a11y (plugin do Storybook)
+- Google Lighthouse
+- Leitor de tela
+
+## Passo a passo do desenvolvimento
+
+Nesta seção, será apresentado um resumo do processo de desenvolvimento dos casos de teste do trabalho.
+
+Inicialmente, será exibida a aparência do caso após o desenvolvimento inicial, sem considerar a acessibilidade. Em seguida, será iniciada a abordagem para tornar o caso acessível, começando pela abordagem de eficiência no desenvolvimento.
+
+### Abordagem de Eficiência
+
+Esta abordagem visa demonstrar a utilidade de ferramentas como extensões de IDEs e o plugin do Storybook, que oferecem suporte à acessibilidade, para a detecção e correção de erros comuns de acessibilidade durante o desenvolvimento. É importante adotar essa abordagem, pois muitos erros relacionados à semântica do HTML podem ser evitados durante esta etapa.
+
+### Abordagem Quantitativa
+
+A abordagem quantitativa busca quantificar a acessibilidade de uma tela/componente utilizando a ferramenta Google Lighthouse, que avalia a conformidade com os critérios de acessibilidade baseados nas diretrizes do WCAG. Dessa forma, é possível identificar erros que não foram detectados na etapa anterior.
+
+### Abordagem Subjetiva
+
+A subjetividade entra em cena quando ferramentas automatizadas não conseguem identificar todos os erros de acessibilidade, que podem ser descobertos apenas por meio de uma análise mais detalhada. Nesta abordagem, será utilizado um Leitor de Tela para obter uma melhor compreensão do conteúdo apresentado. Se o desenvolvedor identificar algum problema, ele poderá corrigi-lo com base nas diretrizes do WCAG.
+
+## Casos abordados
+
+Os casos abordados no desenvolvimento são:
+
+- A ausência de textos alternativos em imagens
+- O desenvolvimento acessível de um componente UI (Tab)
+
+## Resultados gerais
+
+A tabela abaixo demonstra quais ferramentas foram úteis na inclusão da acessibilidade oferecendo um resumo sobre os casos de teste.
+
+| Casos de teste                 | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
+| ------------------------------ | ---------------- | ---------- | ---------- | -------------- | ---- |
+| Textos alternativos em imagens | Sim              | Sim        | Sim        | Sim            | Sim  |
+| Componente de UI Tab           | Não              | Não        | Não        | Sim            | Sim  |
+
+## Conclusões
+
+## Contato
+
+Caso deseja entrar em contato comigo:
+
+<a href = "mailto:albertohelbig@gmail.com"><img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/alberto-helbig" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
