@@ -1,11 +1,11 @@
 # Componente Image
 
 O componente analisado contém uma imagem e têm como foco a presença de textos alternativos para sua análise de acessibilidade.
-No uso inicial, será considerado o componente "InaccessibleImage", onde será utilizado ferramentas, métricas e abordagens para analisar o caso e sua correção quando a etapa
+No uso inicial, será considerado o componente "InaccessibleImage", onde será utilizado ferramentas, métricas e abordagens para analisar o caso e sua correção quanto a etapa de desenvolvimento.
 
 Resultado visual do componente inacessível:
 
-![](../../assets/man-hiking-in-mountains.jpg)
+![](../../assets/img-case/man-hiking-in-mountains.jpg)
 
 ## Abordagem de Eficiência
 
@@ -33,7 +33,7 @@ das ferramentas:
 
 ### Google Lighthouse
 
-![Feedback do plugin do storybook para a violação da acessibilidade](../../assets/img-case/inaccessible-lighthouse.png)
+![Feedback do Lighthouse para a violação da acessibilidade](../../assets/img-case/inaccessible-lighthouse.png)
 
 Aqui podemos observar que a pontuação atingida foi afetada por infringir a regra de ausência de atributos [alt] para elementos de imagens.
 
@@ -48,8 +48,8 @@ Para o leitor de tela é necessário a presença de textos alternativos em image
 Embora as ferramentas tenham provido um feedback necessário para correção sem a consulta das diretrizes, pode-se pesquisar a cerca do assunto a fim de observar aos aspectos que estão sendo infringidos quando as imagens estão inacessíveis. Após uma breve pesquisa sobre "textos alternativos em imagens", encontra-se que este caso se enquadra nos seguintes aspectos das diretrizes do WCAG:
 
 - Princípio Perceptível
-- Diretriz 1.1 - Textos Alternativos
-- Critério de sucesso 1.1.1 - Conteúdo não textual com nível A
+  - Diretriz 1.1 - Textos Alternativos
+  - Critério de sucesso 1.1.1 - Conteúdo não textual com nível A
 
 Detalhes sobre esse critério podem ser encontradas <a href="https://www.w3.org/TR/WCAG22/#non-text-content" aria-label="Diretrizes do WCAG sobre textos alternativos">aqui</a>.
 
@@ -61,15 +61,15 @@ Além da propriedade [alt], para contemplar a acessibilidade podem ser utilizada
 
 Um ponto a se ressaltar é que a descrição da imagem seja feita o mais rica possível, evitando descrições curtas, ou palavras que não façam sentido com o conteúdo da imagem. Em alguns casos, onde a imagem é apenas decorativa, o simples fato de deixar o texto alternativo como vazio ("") é suficiente para evitar a inacessibilidade do mesmo.
 
+### Feedbacks após a inclusão de um texto alternativo para a imagem
+
 Resultado visual do componente "AccessibleImage", que corresponde ao componente ajustado de acordo com a análise e, então acessível:
 
 ![Feedback do plugin do storybook sem erros](../../assets/img-case/accessible-storybook.png)
 
-![Feedback do plugin do lighthouse sem erros](../../assets/img-case/accesible-lighthouse.png)
+![Feedback do plugin do lighthouse sem erros](../../assets/img-case/accessible-lighthouse.png)
 
-![Homem de costas caminhando entre as montanhas](../../assets/man-hiking-in-mountains.jpg)
-
-### Feedbacks após a inclusão de um texto alternativo para a imagem
+![Homem de costas caminhando entre as montanhas](../../assets/img-case/man-hiking-in-mountains.jpg)
 
 O LT proferiu a seguinte informação ao usuário "Homem de costas caminhando entre as montanhas", o que neste caso é a informação contida no atributo [alt], assim tornando a imagem acessível.
 

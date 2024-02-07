@@ -3,7 +3,7 @@ import type { Meta } from '@storybook/react'
 import { AcessibleImage as AccImg, InacessibleImage as InaccImg } from './Image'
 
 export default {
-  title: 'Image',
+  title: 'Cases/Image',
   parameters: {
     layout: 'fullscreen',
   },
