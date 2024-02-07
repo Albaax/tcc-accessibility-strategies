@@ -1,0 +1,33 @@
+.wrapper {
+  background: #fff;
+  padding: 50px;
+}
+
+.tab {
+  padding: 8px;
+  border: none;
+  color: #2d3748;
+  background: #fff;
+  border-bottom: #c1bcbc 1px solid;
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: rgba(3, 55, 97, 0.8);
+  border-bottom: #171923 2px solid !important;
+  outline: none;
+}
+
+.tab:focus {
+  color: rgba(3, 55, 97, 0.8);
+  border-bottom: #171923 1px solid;
+  outline: none;
+}
+
+.content {
+  margin-top: 10px;
+  color: #0e0e0e;
+}
