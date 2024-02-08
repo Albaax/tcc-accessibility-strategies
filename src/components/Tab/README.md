@@ -17,7 +17,7 @@ Nesta etapa será utilizada as extensões do VSCode para apoio e o plugin de ace
 
 Utilizando o mesmo código do componente inacessível, observado na figura abaixo, percebe-se que o código realiza a funcionalidade visual final esperada e não recebe nenhum feedback das extensões, mostrando que teoricamente não há erros de acessibilidade, ou não são possíveis de compreender com estas ferramentas.
 
-![Código do componente tab inacessível](../../assets/tab-case/inaccessible-code.png.png)
+![Código do componente tab inacessível](../../assets/tab-case/inaccessible-code.png)
 
 ### Addon/a11y (Storybook)
 
