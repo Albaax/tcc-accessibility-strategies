@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
 
-import { AccessibleTab as AccTab, InaccessibleTab as InaccTab } from './Tab'
+import { AccessibleTab, InaccessibleTab } from './Tab'
 
 export default {
   title: 'Cases/Tab',
@@ -9,6 +9,6 @@ export default {
   },
 } satisfies Meta
 
-export const AccessibleTab = () => <AccTab />
+export const Accessible = () => <AccessibleTab />
 
-export const InaccessibleTab = () => <InaccTab />
+export const Inaccessible = () => <InaccessibleTab />

@@ -6,6 +6,32 @@ type TabRefs = {
   ref: React.RefObject<HTMLButtonElement>
 }[]
 
+export function InaccessibleTab() {
+  const [activeTab, setActiveTab] = React.useState(0)
+
+  const handleSelected = (index: number) => {
+    setActiveTab(index)
+  }
+
+  return (
+    <div className="wrapper">
+      <div>
+        {tabsMock.map((tab, index) => (
+          <button
+            key={tab.title}
+            type="button"
+            onClick={() => handleSelected(index)}
+            className={`tab ${activeTab === index ? 'active' : ''}`}
+          >
+            {tab.title}
+          </button>
+        ))}
+      </div>
+      <div className="content">{tabsMock[activeTab].content}</div>
+    </div>
+  )
+}
+
 export function AccessibleTab() {
   const [activeTab, setActiveTab] = React.useState(0)
 
@@ -85,32 +111,6 @@ export function AccessibleTab() {
           </section>
         ))}
       </div>
-    </div>
-  )
-}
-
-export function InaccessibleTab() {
-  const [activeTab, setActiveTab] = React.useState(0)
-
-  const handleSelected = (index: number) => {
-    setActiveTab(index)
-  }
-
-  return (
-    <div className="wrapper">
-      <div>
-        {tabsMock.map((tab, index) => (
-          <button
-            key={tab.title}
-            type="button"
-            onClick={() => handleSelected(index)}
-            className={`tab ${activeTab === index ? 'active' : ''}`}
-          >
-            {tab.title}
-          </button>
-        ))}
-      </div>
-      <div className="content">{tabsMock[activeTab].content}</div>
     </div>
   )
 }

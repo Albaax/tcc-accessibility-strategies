@@ -1,7 +1,7 @@
 # Componente Image
 
 O componente analisado contém uma imagem e têm como foco a presença de textos alternativos para sua análise de acessibilidade.
-No uso inicial, será considerado o componente "InaccessibleImage", onde será utilizado ferramentas, métricas e abordagens para analisar o caso e sua correção quanto a etapa de desenvolvimento.
+No uso inicial, será considerado o componente `InaccessibleImage` do arquivo `Image.tsx`, onde será utilizado ferramentas, métricas e abordagens para analisar o caso e sua correção quanto a etapa de desenvolvimento.
 
 Resultado visual do componente inacessível:
 
@@ -23,8 +23,7 @@ Nestas imagens, percebe-se que erros como estes podem ser evitados durante a eta
 ![Feedback do plugin do storybook para a violação da acessibilidade](../../assets/img-case/inaccessible-storybook.png)
 
 Observa-se que os erros apontados em código, também são disponibilizados por esta ferramenta juntamente de onde foram encontrados, e
-até quais diretrizes foram infringidas neste desenvolvimento. Como este report gerado é dinâmico e acontece durante o desenvolvimento é de grande
-valia para observar a motivação por trás do problema gerado, como a diretriz e o princípio WCAG infringido.
+até quais diretrizes foram infringidas neste desenvolvimento. Como este report gerado é dinâmico e acontece durante o desenvolvimento é de grande valia para observar a motivação por trás do problema gerado, como a diretriz e o princípio WCAG infringido.
 
 ## Abordagem Quantitativa
 
@@ -63,7 +62,7 @@ Um ponto a se ressaltar é que a descrição da imagem seja feita o mais rica po
 
 ### Feedbacks após a inclusão de um texto alternativo para a imagem
 
-Resultado visual do componente "AccessibleImage", que corresponde ao componente ajustado de acordo com a análise e, então acessível:
+Resultado visual do componente `AccessibleImage`, que corresponde ao componente ajustado de acordo com a análise e, então acessível:
 
 ![Feedback do plugin do storybook sem erros](../../assets/img-case/accessible-storybook.png)
 
@@ -78,7 +77,7 @@ O LT proferiu a seguinte informação ao usuário "Homem de costas caminhando en
 Para analisar o caso, vamos observar como as ferramentas e abordagens utilizadas podem ser úteis para este caso, ou seja, quais que foram necessárias para a identificação
 do problema acessibilidade em destaque, e foram de grande valia para o auxílio na correção.
 
-|                                | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
+| Caso                           | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
 | ------------------------------ | ---------------- | ---------- | ---------- | -------------- | ---- |
 | Textos alternativos em imagens | Sim              | Sim        | Sim        | Sim            | Sim  |
 

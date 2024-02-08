@@ -34,6 +34,8 @@ As ferramentas de apoio utilizadas no projeto são:
 - Google Lighthouse
 - Leitor de tela
 
+Obs.: A maioria das ferramentas de acessibilidade utiliza o mecanismo de teste axe em sua estrutura. <a href="https://github.com/dequelabs/axe-core">Axe</a> é uma ferramenta de teste de acessibilidade para sites e outras interfaces de usuário baseadas em HTML. Por isso, é comum que as ferramentas forneçam feedbacks semelhantes em alguns casos.
+
 ## Passo a passo do desenvolvimento
 
 Nesta seção, será apresentado um resumo do processo de desenvolvimento dos casos de teste do trabalho.
@@ -58,15 +60,19 @@ Os casos abordados no desenvolvimento são:
 
 - A ausência de textos alternativos em imagens
 - O desenvolvimento acessível de um componente UI (Tab)
+- Estruturação de seções por headings ordenados corretamente
 
 ## Resultados gerais
 
 A tabela abaixo demonstra quais ferramentas foram úteis na inclusão da acessibilidade oferecendo um resumo sobre os casos de teste.
 
-| Casos de teste                 | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
-| ------------------------------ | ---------------- | ---------- | ---------- | -------------- | ---- |
-| Textos alternativos em imagens | Sim              | Sim        | Sim        | Sim            | Sim  |
-| Componente de UI Tab           | Não              | Não        | Não        | Sim            | Sim  |
+| Casos de teste                      | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
+| ----------------------------------- | ---------------- | ---------- | ---------- | -------------- | ---- |
+| Textos alternativos em imagens      | Sim              | Sim        | Sim        | Sim            | Sim  |
+| Componente de UI Tab                | Não              | Não        | Não        | Sim            | Sim  |
+| Estruturação de seções por headings | Não              | Sim        | Sim        | Não\*          | Sim  |
+
+\* Com ressalvas para uma análise mais detalhada, na qual o LT poderia ser útil, embora sua abordagem não seja tão simples para o desenvolvedor.
 
 ## Conclusões
 

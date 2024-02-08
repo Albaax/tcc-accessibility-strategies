@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
 
-import { AcessibleImage as AccImg, InacessibleImage as InaccImg } from './Image'
+import { AcessibleImage, InacessibleImage } from './Image'
 
 export default {
   title: 'Cases/Image',
@@ -9,6 +9,6 @@ export default {
   },
 } satisfies Meta<typeof Image>
 
-export const AcessibleImage = () => <AccImg />
+export const Acessible = () => <AcessibleImage />
 
-export const InacessibleImage = () => <InaccImg />
+export const Inacessible = () => <InacessibleImage />

@@ -15,9 +15,9 @@ Nesta etapa será utilizada as extensões do VSCode para apoio e o plugin de ace
 
 ### axe Accessibility Linter e Webhint
 
-Utilizando o mesmo código do componente inacessível, observado na figura abaixo, percebe-se que o código realiza a funcionalidade visual final esperada e não recebe nenhum feedback das extensões, mostrando que teóricamente não há erros de acessibilidade, ou não são possíveis de compreender com estas ferramentas.
+Utilizando o mesmo código do componente inacessível, observado na figura abaixo, percebe-se que o código realiza a funcionalidade visual final esperada e não recebe nenhum feedback das extensões, mostrando que teoricamente não há erros de acessibilidade, ou não são possíveis de compreender com estas ferramentas.
 
-![Código do componente tab inacessível](../../assets/tab-case/tab-component.png)
+![Código do componente tab inacessível](../../assets/tab-case/inaccessible-code.png.png)
 
 ### Addon/a11y (Storybook)
 
@@ -31,7 +31,7 @@ Ao analisar com as métricas oferecidas pelo <i>addon/a11y</i>, observa-se que n
 
 Utilizando do apoio do Ligthouse para observar as métricas quantitativas do desenvolvimento pode-se inferir também, que não houve nenhum erro violado possível de observar pela ferramenta.
 
-![Feedback do plugin do storybook para a violação ](../../assets/tab-case/inaccessible-lighthouse.png)
+![Feedback do Lighthouse para a violação ](../../assets/tab-case/inaccessible-lighthouse.png)
 
 Obs.: Após a utilização das ferramentas nenhuma irregularidade foi encontrada por elas, o que exemplifica uma situação onde a ferramenta não pode alcançar. O motivo, neste caso, é que não há erro por parte do desenvolvimento para as ferramentas encontrarem, e sim um erro na construção da estrutura para o componente tab, que visualmente aparente estar funcionando, mas pode não estar corretamente estruturado.
 
@@ -64,7 +64,7 @@ Segundo uma breve pesquisa na documentação do W3C observamos algumas modifica�
   - Diretriz 2.1 - Teclado acessível
   - Critério de sucesso 2.1.1 - Teclado com (nível A).
   - Diretriz 2.4 - Navegável
-  - Critério de sucesso 2.1.1 - Ordem de foco (nível A).
+  - Critério de sucesso 2.4.3 - Ordem de foco (nível A).
 
 - Princípio Robusto
 
@@ -95,7 +95,7 @@ Após essas alterações, foram recebidos os seguintes feedbacks das ferramentas
 
 ![Feedback do plugin do storybook após inclusão](../../assets/tab-case/accessible-storybook.png)
 
-![Feedback do plugin do lighthouse após inclusão](../../assets/tab-case/accessible-lighthouse.png)
+![Feedback do Lighthouse após inclusão](../../assets/tab-case/accessible-lighthouse.png)
 
 Considerando a primeira tab selecionada por padrão, o LT proferiu os seguintes feedbacks:
 
@@ -109,9 +109,9 @@ Considerando a primeira tab selecionada por padrão, o LT proferiu os seguintes 
 Para analisar o caso, vamos observar como as ferramentas e abordagens utilizadas podem ser úteis para este caso, ou seja, quais que foram necessárias para a identificação
 do problema acessibilidade em destaque, e foram de grande valia para o auxílio na correção.
 
-|                      | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
+| Caso                 | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
 | -------------------- | ---------------- | ---------- | ---------- | -------------- | ---- |
-| Componente de UI Tab | Não              | Não        | Não        | Sim            | Sim  |
+| Componente de UI Tab | Não              | Sim        | Sim        | Sim            | Sim  |
 
 Conforme a tabela, conclui-se que nenhuma ferramenta automatizada conseguiu auxiliar na correção de forma significativa, visto que para o entendimento de inclusão de acessibilidade neste componente necessitaria do auxílio do LT para uma análise subjetiva do desenvolvedor. Dito isso, entendemos que nem sempre as ferramentas automatizadas serão suficientes para garantir a acessibilidade, por isso, a importância da combinação das ferramentas e análises no desenvolvimento.
 
