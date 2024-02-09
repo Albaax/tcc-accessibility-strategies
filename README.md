@@ -18,11 +18,13 @@ Com as dependências instaladas você pode abrir o storybook onde os casos estã
 
 Aqui, você já poderá interagir com os casos como pode-se ver na imagem abaixo:
 
-![](...)IMAGEM AQUI
+![Interface do storybook](/src/assets/visual-storybook.png)
 
 ## Objetivo do trabalho
 
-Este trabalho tem como objetivo apresentar métodos de desenvolvimento voltados para a acessibilidade, os quais podem ser integrados de maneira mais simples ao processo de desenvolvimento para os front-ends. O foco está em eliminar os erros mais comuns de acessibilidade frequentemente encontrados em sites da web.
+Segundo <a href="https://webaim.org/projects/million">Webaim</a>, cerca de 96.8% das páginas iniciais da internet apresentam algum erro de acessibilidade de acordo com as diretrizes do WCAG.
+
+Este trabalho tem como objetivo apresentar métodos de desenvolvimento voltados para a inclusão da acessibilidade, os quais podem ser integrados de maneira mais simples ao processo de desenvolvimento para os front-ends. O foco está em eliminar os erros mais comuns de acessibilidade frequentemente encontrados em sites da web com objetivo de diminuir a estatística mencionada.
 
 ## Ferramentas de apoio à acessibilidade
 
@@ -44,33 +46,47 @@ Inicialmente, será exibida a aparência do caso após o desenvolvimento inicial
 
 ### Abordagem de Eficiência
 
-Esta abordagem visa demonstrar a utilidade de ferramentas como extensões de IDEs e o plugin do Storybook, que oferecem suporte à acessibilidade, para a detecção e correção de erros comuns de acessibilidade durante o desenvolvimento. É importante adotar essa abordagem, pois muitos erros relacionados à semântica do HTML podem ser evitados durante esta etapa.
+Esta abordagem destaca a utilidade das ferramentas, como extensões de IDEs e o plugin do Storybook, que oferecem suporte à acessibilidade. Elas permitem a detecção e correção de erros comuns de acessibilidade durante o desenvolvimento. Adotar essa abordagem é crucial, pois muitos erros relacionados à semântica do HTML podem ser evitados nessa etapa.
 
 ### Abordagem Quantitativa
 
-A abordagem quantitativa busca quantificar a acessibilidade de uma tela/componente utilizando a ferramenta Google Lighthouse, que avalia a conformidade com os critérios de acessibilidade baseados nas diretrizes do WCAG. Dessa forma, é possível identificar erros que não foram detectados na etapa anterior.
+A abordagem quantitativa busca quantificar a acessibilidade de uma tela/componente utilizando a ferramenta Google Lighthouse. Essa ferramenta avalia a conformidade com os critérios de acessibilidade baseados nas diretrizes do WCAG. Dessa forma, é possível identificar erros que não foram detectados na etapa anterior, já que a análise é feita de forma abrangente, considerando todo o HTML da página como um conjunto.
 
 ### Abordagem Subjetiva
 
-A subjetividade entra em cena quando ferramentas automatizadas não conseguem identificar todos os erros de acessibilidade, que podem ser descobertos apenas por meio de uma análise mais detalhada. Nesta abordagem, será utilizado um Leitor de Tela para obter uma melhor compreensão do conteúdo apresentado. Se o desenvolvedor identificar algum problema, ele poderá corrigi-lo com base nas diretrizes do WCAG.
+A subjetividade surge quando as ferramentas automatizadas não conseguem identificar todos os erros de acessibilidade, que podem ser descobertos apenas por meio de uma análise mais detalhada. Nesta abordagem, utiliza-se um Leitor de Tela para obter uma melhor compreensão do conteúdo apresentado. Se o desenvolvedor identificar algum problema, ele poderá corrigi-lo com base nas diretrizes do WCAG.
 
 ## Casos abordados
 
 Os casos abordados no desenvolvimento são:
 
-- A ausência de textos alternativos em imagens
-- O desenvolvimento acessível de um componente UI (Tab)
-- Estruturação de seções por headings ordenados corretamente
+- (1) Ausência de textos alternativos em imagens
+- (2) O desenvolvimento acessível de um componente UI (Tab)
+- (3) Estruturação de seções por headings ordenados corretamente
+- (4) Inclusão de labels em inputs de formulários
+
+Esses casos podem ser observados detalhadamente na pasta `src/components/<Case>`.
+
+## Estatísticas dos casos abordados
+
+Segundo <a href="https://webaim.org/projects/million">WebAim</a>, ao analisar as 1.000.000 páginas iniciais mais acessadas da internet, foram identificados 49.991.225 erros de acessibilidade distintos, resultando em uma média de 50,0 erros por página.
+
+Em relação às imagens, em uma amostra de 43 milhões delas, aproximadamente 22% não possuíam texto alternativo, enquanto 10,9% continham textos alternativos questionáveis, como "imagem", "gráfico", "em branco" ou um nome de arquivo. Isso significa que cerca de um terço das imagens não ofereciam textos acessíveis aos usuários, prejudicando especialmente aqueles que dependem de leitores de tela.
+
+Os títulos são cruciais para a navegação dos leitores de tela pelo conteúdo das páginas. Foram identificados mais de 24,7 milhões de títulos, sendo que cerca de 1.150.000 deles estavam em níveis de título ignorados, como o uso de `<h2>` para `<h4>`. Essa prática foi observada em 42,2% de todas as páginas analisadas, e aproximadamente 8% delas não continham nenhum título.
+
+Quanto aos formulários, a quantidade de inputs continua aumentando, sendo que cerca de 36% deles não estão devidamente rotulados, seja através de `<label>`, [aria-label], [aria-labelledby] ou [title]. Embora esse número seja significativo, houve melhorias ao longo dos anos. Esse problema impacta diretamente na capacidade de usuários com deficiência de submeterem formulários de maneira eficaz.
 
 ## Resultados gerais
 
 A tabela abaixo demonstra quais ferramentas foram úteis na inclusão da acessibilidade oferecendo um resumo sobre os casos de teste.
 
-| Casos de teste                      | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
-| ----------------------------------- | ---------------- | ---------- | ---------- | -------------- | ---- |
-| Textos alternativos em imagens      | Sim              | Sim        | Sim        | Sim            | Sim  |
-| Componente de UI Tab                | Não              | Não        | Não        | Sim            | Sim  |
-| Estruturação de seções por headings | Não              | Sim        | Sim        | Não\*          | Sim  |
+| Casos de teste                      | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela |
+| ----------------------------------- | ---------------- | ---------- | ---------- | -------------- |
+| Textos alternativos em imagens      | Sim              | Sim        | Sim        | Sim            |
+| Componente de UI Tab                | Não              | Não        | Não        | Sim            |
+| Estruturação de seções por headings | Não              | Sim        | Sim        | Não\*          |
+| Rotulação de inputs em formulários  |                  |            |            |                |
 
 \* Com ressalvas para uma análise mais detalhada, na qual o LT poderia ser útil, embora sua abordagem não seja tão simples para o desenvolvedor.
 

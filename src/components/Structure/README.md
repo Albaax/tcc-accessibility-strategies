@@ -43,14 +43,17 @@ Este feedback é redundante ao provido pelo addon/a11y, porém reforça a necess
 
 ### Leitor de tela (LT)
 
-Para o leitor de tela utilizaremos de sua leitura de conteúdo textual e estrutural para observar a estruturação da página, visto que o caso abordado não utiliza de componentes navefáveis via teclado.
+Para o leitor de tela, utilizaremos sua leitura do conteúdo textual e estrutural para observar a organização da página, uma vez que o caso abordado não utiliza componentes navegáveis via teclado.
 
-No feedback provido pelo LT, observa-se que ele segue uma leitura a acerca do conteúdo, lendo títulos, parágrafos e assim por diante. No caso, apenas quando clica-se em cima de um título consegue-se perceber o destaque do nível do título.
-Pode-se desconfiar que não há uma descendência correta da ordem dos títulos na estruturação das seções, porém, não é de fácil identificação. Dito isso, é plausível afirmar que o LT não foi de grande valia para avaliação da acessibilidade por parte do desenvolvedor, visto que este não detém as mesmas percepções de pessoas utilizam dos LTs.
+Ao analisar o feedback fornecido pelo LT, observa-se que ele segue uma leitura sequencial do conteúdo, incluindo títulos, parágrafos e outros elementos. No entanto, apenas ao clicar em um título é possível perceber o destaque do nível do título.
+
+É possível suspeitar que a ordem dos títulos na estruturação das seções não esteja correta, mas essa questão não é facilmente identificada. Portanto, é plausível afirmar que o LT não foi de grande utilidade para a avaliação da acessibilidade pelo desenvolvedor, uma vez que este não possui as mesmas percepções dos usuários que utilizam leitores de tela.
+
+Obs.: Alguns leitores de tela oferecem recursos para diferenciar os níveis dos cabeçalhos, como ajustes no tom de voz, entonação ou velocidade da fala ao ler os cabeçalhos. Esses ajustes permitem que os usuários reconheçam e caracterizem os níveis dos cabeçalhos com base nas variações de áudio. Dessa forma, ao escutar repetidamente os cabeçalhos, os usuários conseguem identificar mais facilmente a hierarquia do conteúdo na página da web.
 
 ### Diretrizes do WCAG
 
-Segundo uma breve pesquisa na documentação do W3C, baseado nos feedbacks providos pelo addon/a11y e Lighthouse observamos algumas modificações devem ser realizadas para obedecerem os seguintes aspectos das diretrizes do WCAG:
+Segundo uma breve pesquisa na documentação do W3C, baseado nos feedbacks providos pelo addon/a11y e Lighthouse observamos algumas modificações que devem ser realizadas para obedecerem os seguintes aspectos das diretrizes do WCAG:
 
 - Princípio Perceptível (técnica <b>Consultiva</b>)
 
@@ -91,9 +94,9 @@ O feedback mais detalhado do LT não demonstra nenhuma irregularidade ao avança
 
 Para analisar o caso, vamos observar como as ferramentas e abordagens utilizadas podem ser úteis para este caso, ou seja, quais que foram necessárias para a identificação do problema acessibilidade em destaque, e foram de grande valia para o auxílio na correção. É importante frisar, que esta tabela passa pelo ponto de vista do desenvolvedor.
 
-| Caso                                | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
-| ----------------------------------- | ---------------- | ---------- | ---------- | -------------- | ---- |
-| Estruturação de seções por headings | Não              | Sim        | Sim        | Não\*          | Sim  |
+| Caso                                | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela |
+| ----------------------------------- | ---------------- | ---------- | ---------- | -------------- |
+| Estruturação de seções por headings | Não              | Sim        | Sim        | Não\*          |
 
 \* Com ressalvas para uma análise mais detalhada, na qual o LT poderia ser útil, embora sua abordagem não seja tão simples para o desenvolvedor.
 

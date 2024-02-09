@@ -1,11 +1,11 @@
 # Componente Image
 
-O componente analisado contém uma imagem e têm como foco a presença de textos alternativos para sua análise de acessibilidade.
+O componente analisado contém uma imagem e têm como foco a presença de textos alternativos para sua análise de acessibilidade. Este caso é um dos mais comuns encontrados ao longo dos sites na web.
 No uso inicial, será considerado o componente `InaccessibleImage` do arquivo `Image.tsx`, onde será utilizado ferramentas, métricas e abordagens para analisar o caso e sua correção quanto a etapa de desenvolvimento.
 
 Resultado visual do componente inacessível:
 
-![](../../assets/img-case/man-hiking-in-mountains.jpg)
+![](../../assets/img-case/man-hiking-in-mountains.png)
 
 ## Abordagem de Eficiência
 
@@ -68,7 +68,7 @@ Resultado visual do componente `AccessibleImage`, que corresponde ao componente 
 
 ![Feedback do plugin do lighthouse sem erros](../../assets/img-case/accessible-lighthouse.png)
 
-![Homem de costas caminhando entre as montanhas](../../assets/img-case/man-hiking-in-mountains.jpg)
+![Homem de costas caminhando entre as montanhas](../../assets/img-case/man-hiking-in-mountains.png)
 
 O LT proferiu a seguinte informação ao usuário "Homem de costas caminhando entre as montanhas", o que neste caso é a informação contida no atributo [alt], assim tornando a imagem acessível.
 
@@ -77,9 +77,9 @@ O LT proferiu a seguinte informação ao usuário "Homem de costas caminhando en
 Para analisar o caso, vamos observar como as ferramentas e abordagens utilizadas podem ser úteis para este caso, ou seja, quais que foram necessárias para a identificação
 do problema acessibilidade em destaque, e foram de grande valia para o auxílio na correção.
 
-| Caso                           | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
-| ------------------------------ | ---------------- | ---------- | ---------- | -------------- | ---- |
-| Textos alternativos em imagens | Sim              | Sim        | Sim        | Sim            | Sim  |
+| Caso                           | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela |
+| ------------------------------ | ---------------- | ---------- | ---------- | -------------- |
+| Textos alternativos em imagens | Sim              | Sim        | Sim        | Sim            |
 
 Conforme a tabela, conclui-se que todas as ferramentas e abordagens utilizadas podem identificar a falta de acessibilidade quando não há a presença de textos alternativos em imagens.
 Neste caso, não há a necessidade da utilização de todas ferramentas e abordagens, visto que podem ser eliminadas no código, porém foi utilizada todas as ferramentas a fim de complementar a análise como um todo.

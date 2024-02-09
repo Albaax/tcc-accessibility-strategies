@@ -109,9 +109,9 @@ Considerando a primeira tab selecionada por padrão, o LT proferiu os seguintes 
 Para analisar o caso, vamos observar como as ferramentas e abordagens utilizadas podem ser úteis para este caso, ou seja, quais que foram necessárias para a identificação
 do problema acessibilidade em destaque, e foram de grande valia para o auxílio na correção.
 
-| Caso                 | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela | WCAG |
-| -------------------- | ---------------- | ---------- | ---------- | -------------- | ---- |
-| Componente de UI Tab | Não              | Sim        | Sim        | Sim            | Sim  |
+| Caso                 | Extensões VSCode | Addon/a11y | Lighthouse | Leitor de Tela |
+| -------------------- | ---------------- | ---------- | ---------- | -------------- |
+| Componente de UI Tab | Não              | Não        | Não        | Sim            |
 
 Conforme a tabela, conclui-se que nenhuma ferramenta automatizada conseguiu auxiliar na correção de forma significativa, visto que para o entendimento de inclusão de acessibilidade neste componente necessitaria do auxílio do LT para uma análise subjetiva do desenvolvedor. Dito isso, entendemos que nem sempre as ferramentas automatizadas serão suficientes para garantir a acessibilidade, por isso, a importância da combinação das ferramentas e análises no desenvolvimento.
 
