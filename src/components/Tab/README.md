@@ -1,4 +1,4 @@
-# Componente Tab
+# Caso: Construção acessível de um componente de UI (Tab)
 
 O caso em destaque contém o componente de UI Tab, que é bastante utilizado nos mais variados sites. O componente Tab, nada mais é que um separador de conteúdo onde em uma lista de Tabs, pretende-se ter vários conteúdos diferentes a partir da ativação de sua tab correspondente.
 

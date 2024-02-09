@@ -1,4 +1,4 @@
-# Componente Image
+# Caso: Textos alternativos em imagens
 
 O componente analisado contém uma imagem e têm como foco a presença de textos alternativos para sua análise de acessibilidade. Este caso é um dos mais comuns encontrados ao longo dos sites na web.
 No uso inicial, será considerado o componente `InaccessibleImage` do arquivo `Image.tsx`, onde será utilizado ferramentas, métricas e abordagens para analisar o caso e sua correção quanto a etapa de desenvolvimento.

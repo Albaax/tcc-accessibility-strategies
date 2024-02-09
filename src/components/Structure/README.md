@@ -1,4 +1,4 @@
-# Componente Structure
+# Caso: Estruturação de seções por headings
 
 O caso em destaque contém uma estruturação de HTML com foco em organizações de seções de páginas por headings, na qual deve estar presente em todos os sites para facilitar a navegação do usuário pelo conteúdo. O componente Structure conta com uma estrutura básica com foco na organização dos headings pelo seus níveis. Este caso é bem comum nos sites e afeta diretamente a acessibilidade e SEO das suas páginas.
 
