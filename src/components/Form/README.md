@@ -134,7 +134,28 @@ Resultado visual do componente `AccessibleForm`, que corresponde ao componente a
 
 ![Feedback do Lighthouse sem erros](../../assets/form-case/accessible-lighthouse.png)
 
-![Código final do formulário](../../assets/form-case/accessible-code.png)
+```html
+<form className="form">
+  <h1 className="form__title">Formulário de cadastro</h1>
+  <div>
+    <label className="form__label">
+      Digite seu nome
+      <input type="text" className="form__input" />
+    </label>
+  </div>
+
+  <div>
+    <label className="form__label">
+      Digite seu email
+      <input type="email" className="form__input" />
+    </label>
+  </div>
+
+  <div>
+    <button type="submit" className="form__button">Enviar</button>
+  </div>
+</form>
+```
 
 O LT proferiu as seguintes informações após a correção:
 
