@@ -26,6 +26,16 @@ Segundo <a href="https://webaim.org/projects/million">Webaim</a>, cerca de 96.8%
 
 Este trabalho tem como objetivo apresentar métodos de desenvolvimento voltados para a inclusão da acessibilidade, os quais podem ser integrados de maneira mais simples ao processo de desenvolvimento para os front-ends. O foco está em eliminar os erros mais comuns de acessibilidade frequentemente encontrados em sites da web com objetivo de diminuir a estatística mencionada.
 
+### WCAG
+
+As <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Diretrizes de Acessibilidade para Conteúdo da Web (WCAG)</a> explicam como tornar o conteúdo da web mais acessível para pessoas com deficiência. WCAG cobre sites, aplicativos e outros conteúdos digitais. É desenvolvido pela Iniciativa de Acessibilidade da Web (WAI) do World Wide Web Consortium (W3C). WCAG é um padrão internacional.
+
+Existem três níveis de conformidade:
+
+- O nível A é o nível mínimo.
+- O Nível AA inclui todos os requisitos do Nível A e AA. Muitas organizações se esforçam para atingir o Nível AA.
+- O Nível AAA inclui todos os requisitos de Nível A, AA e AAA.
+
 ## Ferramentas de apoio à acessibilidade
 
 As ferramentas de apoio utilizadas no projeto são:
@@ -75,7 +85,7 @@ Em relação às imagens, em uma amostra de 43 milhões delas, aproximadamente 2
 
 Os títulos são cruciais para a navegação dos leitores de tela pelo conteúdo das páginas. Foram identificados mais de 24,7 milhões de títulos, sendo que cerca de 1.150.000 deles estavam em níveis de título ignorados, como o uso de `<h2>` para `<h4>`. Essa prática foi observada em 42,2% de todas as páginas analisadas, e aproximadamente 8% delas não continham nenhum título.
 
-Quanto aos formulários, a quantidade de inputs continua aumentando, sendo que cerca de 36% deles não estão devidamente rotulados, seja através de `<label>`, [aria-label], [aria-labelledby] ou [title]. Embora esse número seja significativo, houve melhorias ao longo dos anos. Esse problema impacta diretamente na capacidade de usuários com deficiência de submeterem formulários de maneira eficaz.
+Quanto aos formulários, a quantidade de inputs continua aumentando, sendo que cerca de 36% deles não estão devidamente rotulados, seja através de `<label>`, `aria-label`, `aria-labelledby` ou `title`. Embora esse número seja significativo, houve melhorias ao longo dos anos. Esse problema impacta diretamente na capacidade de usuários com deficiência de submeterem formulários de maneira eficaz.
 
 ## Resultados gerais
 
@@ -86,11 +96,19 @@ A tabela abaixo demonstra quais ferramentas foram úteis na inclusão da acessib
 | Textos alternativos em imagens      | Sim              | Sim        | Sim        | Sim            |
 | Componente de UI Tab                | Não              | Não        | Não        | Sim            |
 | Estruturação de seções por headings | Não              | Sim        | Sim        | Não\*          |
-| Rotulação de inputs em formulários  |                  |            |            |                |
+| Rotulação de inputs em formulários  | Sim              | Sim        | Sim        | Sim            |
 
 \* Com ressalvas para uma análise mais detalhada, na qual o LT poderia ser útil, embora sua abordagem não seja tão simples para o desenvolvedor.
 
 ## Conclusões
+
+As conclusões de um projeto relacionado à acessibilidade são melhor compreendidas quando consideramos o impacto nas pessoas, em vez de apenas nos números alcançados. Se uma ou algumas pessoas se beneficiam, o projeto já é considerado um sucesso.
+
+Neste trabalho, buscamos simplificar a abordagem da acessibilidade para reduzir os erros mais comuns que afetam tantos usuários, impactando diretamente em suas experiências ou até mesmo impedindo-os de usar um site.
+
+Nos casos abordados, todos foram bem-sucedidos em eliminar os problemas de acessibilidade, seja por meio de ferramentas automatizadas ou pela análise de um leitor de tela. Embora não tenhamos abordado todos os casos possíveis e nem resolvido todos os problemas de acessibilidade, podemos afirmar que uma parte significativa deles pode ser eliminada com as abordagens propostas. Isso garante uma melhor inclusão de pessoas e aprimora a qualidade do desenvolvimento de software, além de ampliar o público-alvo do site.
+
+Portanto, é altamente recomendável que os desenvolvedores utilizem ferramentas e abordagens de acessibilidade, como as mencionadas neste trabalho, ou outras alternativas disponíveis, para garantir a acessibilidade máxima do site e promover a inclusão de um número maior de pessoas.
 
 ## Contato
 

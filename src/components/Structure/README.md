@@ -9,6 +9,8 @@ Resultado visual do componente inacessível:
 
 ![Estrutura visual do componente inacessível](../../assets/structure-case/inaccessible-component.png)
 
+Agora utilizaremos as abordagens para inclusão da acessibilidade no componente:
+
 ## Abordagem de Eficiência
 
 Nesta etapa será utilizada as extensões do VSCode para apoio e o plugin de acessibilidade do Storybook.
@@ -19,13 +21,15 @@ Utilizando o mesmo código do componente inacessível, observado na figura abaix
 
 ![Código do componente inacessível](../../assets/structure-case/inaccessible-code.png)
 
+Note que sem as extensões não é possível visualizar algum lint no código para sinalização desse erro.
+
 ### Addon/a11y (Storybook)
 
-Ao analisar com as métricas oferecidas pelo <i>addon/a11y</i>, observa-se que há uma irregularidade no seu desenvolvimento.
+Ao analisar com as métricas oferecidas pelo <i>addon/a11y</i>, observa-se que há um problema na order semântica dos headings no seu desenvolvimento.
 
 ![Feedback do plugin do storybook](../../assets/structure-case/inaccessible-storybook.png)
 
-Este relatório indica que há um problema na order semântica dos headings.
+Observa-se que os erros apontados em código, também são disponibilizados por esta ferramenta juntamente de onde foram encontrados, e até quais diretrizes foram infringidas neste desenvolvimento. Estas informações aparacem no formato de tags no canto inferior e podem ser utilizadas como chaves de pesquisa para correção desse problema.
 
 ## Abordagem Quantitativa
 
@@ -58,7 +62,7 @@ Segundo uma breve pesquisa na documentação do W3C, baseado nos feedbacks provi
 - Princípio Perceptível (técnica <b>Consultiva</b>)
 
   - Diretriz 1.3 - Adaptável
-  - Critério de sucesso 1.3.1 - Informações e relacionamentos com (nível A).
+  - Critério de sucesso 1.3.1 - Informações e relacionamentos (nível A).
 
 - Princípio Operável (técncica <b>Suficiente</b>)
 
@@ -86,7 +90,7 @@ Após essas alterações, foram recebidos os seguintes feedbacks das ferramentas
 
 ![Feedback do plugin do storybook após inclusão](../../assets/structure-case/accessible-storybook.png)
 
-![Feedback do plugin do lighthouse após inclusão](../../assets/structure-case/accessible-lighthouse.png)
+![Feedback do Lighthouse após inclusão](../../assets/structure-case/accessible-lighthouse.png)
 
 O feedback mais detalhado do LT não demonstra nenhuma irregularidade ao avançar o conteúdo entre as seções, visto que agora os títulos contém pesos satisfatórios em relação a sua estrutura.
 

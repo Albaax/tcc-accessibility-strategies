@@ -9,6 +9,8 @@ Resultado visual do componente inacessível:
 
 ![Componente de UI Tab](../../assets/tab-case/tab-component.png)
 
+Agora utilizaremos as abordagens para inclusão da acessibilidade no componente:
+
 ## Abordagem de Eficiência
 
 Nesta etapa será utilizada as extensões do VSCode para apoio e o plugin de acessibilidade do Storybook.
@@ -44,9 +46,9 @@ Obs.: Após a utilização das ferramentas nenhuma irregularidade foi encontrada
 Para o leitor de tela utilizaremos de sua navegação pelas tabs e pelos painéis de conteúdo das tabs para tentar compreender o conteúdo que ali está fornecido, dado o funcionamento natural esperado do componente tab.
 Com o apoio do LT, recebemos os seguintes feedbacks para:
 
-- Tab selecionada [tab]: "Produtos" (label) + "Botão" (tag html)
-- Tab não selecionada [tab]: "Serviços" (label) + "Botão" (tag html)
-- Painél de conteúdo [tabpanel]: "Computadores, monitores, mouses, teclados, etc." (texto)
+- Tab selecionada `tab`: "Produtos" (label) + "Botão" (tag html)
+- Tab não selecionada `tab`: "Serviços" (label) + "Botão" (tag html)
+- Painél de conteúdo `tabpanel`: "Computadores, monitores, mouses, teclados, etc." (texto)
 
 Analisando do ponto de vista visual, pode parecer correto, visto que os labels e textos estão aparentemente conectados. Entretanto, não há conexão no HTML entre a tab e o painel, então apenas aqueles que conseguem enxergar podem identificar com facilidade qual tab corresponde a qual painel. Além disso, para aqueles que necessitam do leitor de tela, estes não sabem quando a tab está selecionada, ou não, e nem quantas tabs existem, o que dificulta a compreensão desses usuários. Assim sendo, entende-se que este componente está com uma acessibilidade baixa. Desta forma, será necessário pesquisar nas diretrizes do WCAG sobre a acessibilidade deste componente.
 
@@ -57,34 +59,34 @@ Segundo uma breve pesquisa na documentação do W3C observamos algumas modifica�
 - Princípio Perceptível
 
   - Diretriz 1.3 - Adaptável
-  - Critério de sucesso 1.3.1 - Informações e relacionamentos com (nível A).
+  - Critério de sucesso 1.3.1 - Informações e relacionamentos (nível A).
 
 - Princípio Operável
 
   - Diretriz 2.1 - Teclado acessível
-  - Critério de sucesso 2.1.1 - Teclado com (nível A).
+  - Critério de sucesso 2.1.1 - Teclado (nível A).
   - Diretriz 2.4 - Navegável
   - Critério de sucesso 2.4.3 - Ordem de foco (nível A).
 
 - Princípio Robusto
 
   - Diretriz 4.1 - Compatível
-  - Critério de sucesso 4.1.2 - Nome, função e valor com (nível A)
+  - Critério de sucesso 4.1.2 - Nome, função e valor (nível A)
 
 Detalhes sobre esses critérios podem ser encontradas <a href="https://www.w3.org/TR/WCAG22" aria-label="Diretrizes do WCAG sobre as diretrizes">aqui</a>.
 
 Para adequar a acessibilidade a este componente foi adicionado os seguintes atributos:
 
-- [role="tablist"] no componente pai das tabs, para compreender como uma "lista de separadores" e o seu [aria-label="Tabs de conteúdo"] para descrever essa lista
-- [role="tab"] para a tab em si, junto com
-  - [id] para identificar a tab
-  - [tabIndex] dinâmico para a navegação do teclado correta
-  - [aria-controls] para identificar o painel associado a tab respectiva
-  - [aria-selected] para indicar se a tab está selecionada
-- [role="tabpanel] para identificar o container/painel com o conteúdo da tab ativa
-  - [id] para identificar o painel
-  - [aria-hidden] para identificar se o elemento está escondido
-  - [aria-labelledby] para se referir a tab que controla o painel
+- `role="tablist"` no componente pai das tabs, para compreender como uma "lista de separadores" e o seu [aria-label="Tabs de conteúdo"] para descrever essa lista
+- `role="tab"` para a tab em si, junto com
+  - `id` para identificar a tab
+  - `tabIndex` dinâmico para a navegação do teclado correta
+  - `aria-controls` para identificar o painel associado a tab respectiva
+  - `aria-selected` para indicar se a tab está selecionada
+- `[role="tabpanel]` para identificar o container/painel com o conteúdo da tab ativa
+  - `id` para identificar o painel
+  - `aria-hidden` para identificar se o elemento está escondido
+  - `aria-labelledby` para se referir a tab que controla o painel
 
 Além desses atributos, foi inserido uma lógica adicional para a navegação do componente.
 Para o ajuste correto segundo as diretrizes, usou-se de base a seguinte <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/" aria-label="Documentação do W3C sobre o componente tab">documentação</a>
@@ -99,10 +101,10 @@ Após essas alterações, foram recebidos os seguintes feedbacks das ferramentas
 
 Considerando a primeira tab selecionada por padrão, o LT proferiu os seguintes feedbacks:
 
-- Lista de tabs [tablist]: "Tabs de conteúdo" (aria-label) + "Produtos" (label da tab selecionada)
-- Tab selecionada [tab]: "Produtos" (label) + "Tab" (role) + "selecionado" (aria-selected) + "1 de 3" (referência do número de itens e qual posição está)
-- Tab não selecionada [tab]: "Serviços" (label) + "Tab" (role) + "não selecionado" (aria-selected) + "2 de 3" (referência do número de itens e qual posição está)
-- Painél de conteúdo [tabpanel]: "Computadores, monitores, mouses, teclados, etc." (texto) + "Produtos" (aria-labelledby referenciando a tab) + "Painel de separadores" (role tablist)
+- Lista de tabs `tablist` "Tabs de conteúdo" (aria-label) + "Produtos" (label da tab selecionada)
+- Tab selecionada `tab`: "Produtos" (label) + "Tab" (role) + "selecionado" (aria-selected) + "1 de 3" (referência do número de itens e qual posição está)
+- Tab não selecionada `tab`: "Serviços" (label) + "Tab" (role) + "não selecionado" (aria-selected) + "2 de 3" (referência do número de itens e qual posição está)
+- Painél de conteúdo `tabpanel`: "Computadores, monitores, mouses, teclados, etc." (texto) + "Produtos" (aria-labelledby referenciando a tab) + "Painel de separadores" (role tablist)
 
 ## Análise do caso
 
