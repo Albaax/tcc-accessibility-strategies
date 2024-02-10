@@ -124,7 +124,11 @@ Várias alternativas podem ser implementadas, desde que fornecam a informação 
 
 ### Feedbacks após a inclusão dos labels para os inputs
 
-Resultado visual do componente `AccessibleForm`, que corresponde ao componente ajustado de acordo com a análise e, então acessível:
+O código do componente final pode ser encontrado com o nome `AccessibleForm` no arquivo `Form.tsx`.
+
+Resultado visual do componente `AccessibleForm`, que corresponde ao componente ajustado de acordo com a análise, e das ferramentas:
+
+![Estrutura visual do componente acessível](../../assets/tab-case/accessible-component.png)
 
 ![Feedback do plugin do storybook sem erros](../../assets/form-case/accessible-storybook.png)
 

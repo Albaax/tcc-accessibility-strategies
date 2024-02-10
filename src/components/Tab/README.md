@@ -91,7 +91,11 @@ Para adequar a acessibilidade a este componente foi adicionado os seguintes atri
 Além desses atributos, foi inserido uma lógica adicional para a navegação do componente.
 Para o ajuste correto segundo as diretrizes, usou-se de base a seguinte <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/" aria-label="Documentação do W3C sobre o componente tab">documentação</a>
 
-### Feedbacks após a inclusão de um texto alternativo para a imagem
+### Feedbacks após a inclusão de acessibilidade no componente
+
+O código do componente final pode ser encontrado com o nome `AccessibleTab` no arquivo `Tab.tsx`.
+
+![Estrutura visual do componente acessível](../../assets/tab-case/accessible-component.png)
 
 Após essas alterações, foram recebidos os seguintes feedbacks das ferramentas
 

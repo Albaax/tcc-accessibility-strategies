@@ -80,7 +80,7 @@ Mais informações sobre este problema podem ser encontradas em:
 - <a href="https://www.w3.org/WAI/WCAG22/Understanding/section-headings.html">Documentação do critério 2.4.10</a>
 - <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G141">Técnica para alcançar este critério</a>
 
-### Feedbacks após a inclusão de um texto alternativo para a imagem
+### Feedbacks após a inclusão da ordem correta dos headings
 
 O código do componente final pode ser encontrado com o nome `AccessibleStructure` no arquivo `Structure.tsx`.
 
