@@ -70,10 +70,10 @@ A subjetividade surge quando as ferramentas automatizadas não conseguem identif
 
 Os casos abordados no desenvolvimento são:
 
-- (1) Ausência de textos alternativos em imagens
-- (2) O desenvolvimento acessível de um componente UI (Tab)
-- (3) Estruturação de seções por headings ordenados corretamente
-- (4) Inclusão de labels em inputs de formulários
+- (1) [Ausência de textos alternativos em imagens](src/components/Image)
+- (2) [O desenvolvimento acessível de um componente UI (Tab)](src/components/Tab)
+- (3) [Estruturação de seções por headings ordenados corretamente](src/components/Structure)
+- (4) [Inclusão de labels em inputs de formulários](src/components/Form)
 
 Esses casos podem ser observados detalhadamente na pasta `src/components/<Case>`.
 
