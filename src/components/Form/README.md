@@ -128,7 +128,7 @@ O código do componente final pode ser encontrado com o nome `AccessibleForm` no
 
 Resultado visual do componente `AccessibleForm`, que corresponde ao componente ajustado de acordo com a análise, e das ferramentas:
 
-![Estrutura visual do componente acessível](../../assets/tab-case/accessible-component.png)
+![Estrutura visual do componente acessível](../../assets/form-case/accessible-component.png)
 
 ![Feedback do plugin do storybook sem erros](../../assets/form-case/accessible-storybook.png)
 
