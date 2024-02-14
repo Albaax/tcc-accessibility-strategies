@@ -28,9 +28,9 @@ Este trabalho tem como objetivo apresentar métodos de desenvolvimento voltados 
 
 ### WCAG
 
-As <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Diretrizes de Acessibilidade para Conteúdo da Web (WCAG)</a> explicam como tornar o conteúdo da web mais acessível para pessoas com deficiência. WCAG cobre sites, aplicativos e outros conteúdos digitais. É desenvolvido pela Iniciativa de Acessibilidade da Web (WAI) do World Wide Web Consortium (W3C). WCAG é um padrão internacional.
+As <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Diretrizes de Acessibilidade para Conteúdo da Web (WCAG)</a> explicam como tornar o conteúdo da web mais acessível para pessoas com deficiência. WCAG cobre sites, aplicativos e outros conteúdos digitais. É desenvolvido pela Iniciativa de Acessibilidade da Web (WAI) do World Wide Web Consortium (W3C). WCAG é um padrão internacional. As diretrizes do WCAG são organizadas sob 4 princípios: perceptível, operável, compreensível e robusto. Para cada diretriz existem _critérios de sucesso_ testáveis.
 
-Existem três níveis de conformidade:
+Existem três níveis de conformidade para os critérios de sucesso:
 
 - O nível A é o nível mínimo.
 - O Nível AA inclui todos os requisitos do Nível A e AA. Muitas organizações se esforçam para atingir o Nível AA.
@@ -75,7 +75,7 @@ Os casos abordados no desenvolvimento são:
 - (3) [Estruturação de seções por headings ordenados corretamente](src/components/Structure)
 - (4) [Inclusão de labels em inputs de formulários](src/components/Form)
 
-Esses casos podem ser observados detalhadamente na pasta `src/components/<Case>`.
+Esses casos podem ser observados detalhadamente clicando no caso desejado ou indo diretamente na pasta `src/components/<Case>`.
 
 ## Estatísticas dos casos abordados
 
